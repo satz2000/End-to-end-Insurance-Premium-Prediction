@@ -18,7 +18,7 @@ def predict():
     smoker = request.form['smoker']
     region = request.form['region']
     
-    model = pickle.load(open('model.pkl', 'rb'))
+    model = pickle.load(open('Model.pkl', 'rb'))
     data = [[age, sex, bmi, children, smoker, region]]
     
     df = pd.DataFrame(data, columns=['age', 'sex', 'bmi', 'children', 'smoker', 'region'])
